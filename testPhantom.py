@@ -24,7 +24,9 @@ from selenium import webdriver
 import time
 driver = webdriver.Firefox()
 driver.get("https://suensummit.github.io/erjsTesting/")
-time.sleep(5)
+time.sleep(3)
 #driver.find_element_by_id('search_form_input_homepage').send_keys("realpython")
 #driver.find_element_by_id("search_button_homepage").click()
+driver.find_element_by_id("register").click()
+time.sleep(3)
 driver.quit()
