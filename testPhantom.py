@@ -11,6 +11,7 @@
 
 # test code 2
 
+import os
 from selenium import webdriver
 driver = webdriver.Firefox()
 driver.get("https://duckduckgo.com/")
