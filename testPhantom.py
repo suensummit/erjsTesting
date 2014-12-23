@@ -18,7 +18,7 @@
 # driver.find_element_by_id("search_button_homepage").click()
 # driver.quit()
 
-# cwraler for testing example EC site
+# tester for testing example EC site
 
 from selenium import webdriver
 import time
