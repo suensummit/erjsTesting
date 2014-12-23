@@ -11,10 +11,20 @@
 
 # test code 2
 
-import os
+# from selenium import webdriver
+# driver = webdriver.Firefox()
+# driver.get("https://duckduckgo.com/")
+# driver.find_element_by_id('search_form_input_homepage').send_keys("realpython")
+# driver.find_element_by_id("search_button_homepage").click()
+# driver.quit()
+
+# cwraler for testing example EC site
+
 from selenium import webdriver
+import time
 driver = webdriver.Firefox()
-driver.get("https://duckduckgo.com/")
-driver.find_element_by_id('search_form_input_homepage').send_keys("realpython")
-driver.find_element_by_id("search_button_homepage").click()
+driver.get("https://suensummit.github.io/erjsTesting/")
+time.sleep(5)
+#driver.find_element_by_id('search_form_input_homepage').send_keys("realpython")
+#driver.find_element_by_id("search_button_homepage").click()
 driver.quit()
