@@ -1,7 +1,14 @@
 from selenium import webdriver
-driver = webdriver.PhantomJS()
-driver.set_window_size(1120, 550)
-driver.get("https://")
-driver.find_element_by_id('search_form_input_homepage').send_keys("realpython")
-driver.find_element_by_id("search_button_homepage").click()
-driver.quit()
+
+# url = "https://shopping.udn.com/mall/Cc1a00.do"
+url = "https://"
+
+for x in testbot:
+	for action in act_list:
+		driver = webdriver.PhantomJS()
+		driver.set_window_size(1120, 550)
+		driver.get(url)
+		driver.find_element_by_id().send_keys()
+		driver.find_element_by_id().click()
+		driver.quit()
+
