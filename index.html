@@ -10,10 +10,22 @@
 		Here is the home page of EC site
 	</div>
 	<div>
-		<a id = "register" href="register.html"> 點我登入 </a>
+		<form id = "set_uid">
+			<fieldset>
+				<legend> Register </legend>
+				<p>
+					<label> log in as </label>
+					<input type = "text"
+					id = "setUid"
+					value = "U01" />
+				</p>
+			</fieldset>
+		</form>
+		<button type="submit" formid="set_uid" formaction="register.html"> 點我登入 </button> 
 	</div>
 	<div>
-		<a id = "unregister" href="product.html"> 我不登入 </a>
+		<a id = "unregister" href="product.html">  </a>
+		<button type="button"> 我不登入 </button> 
 	</div>
 </body>
 </html>
