@@ -2,31 +2,50 @@
 <meta charset="utf-8">
 <html>
 <head>
-
+	<script type="text/javascript">
+		window.onload = function(){
+			getCustomizeActionData();
+		}
+		function getCustomizeActionData(){
+			var actionAttr = document.getElementsByClassName("custom-action");
+			var temp_qevent = {}
+			for( i in actionAttr ){
+				temp_qevent[actionAttr[i].placeholder] = actionAttr[i].value;
+			}
+			console.log("qevent: "+temp_qevent);
+		}
+	</script>
 </head>
 <body>
 	<h1>er.js testing EC site</h1>
 	<div id = "homepage">
 		Here is the home page of EC site
-		<script type="text/javascript" src="http://zh.forvo.com/_ext/ext-prons.js?id=3383988"></script>
 	</div>
+	<br>
+	<br>
 	<div>
-		<form id = "set_uid">
+		<form id = "setDefault">
 			<fieldset>
-				<legend> Register </legend>
+				<legend> default </legend>
 				<p>
+					<label> cid </label>
+					<input class = "custom-action" type = "text" id = "cid" placeholder = "cid" value = "saas_testing_ec"/><br>
 					<label> log in as </label>
-					<input type = "text"
-					id = "setUid"
-					value = "U01" />
+					<input class = "custom-action" type = "text" id = "pid" placeholder = "pid"/><br>
+					<label> log in as </label>
+					<input class = "custom-action" type = "text" id = "act" placeholder = "act"/><br>
+					<label> log in as </label>
+					<input class = "custom-action" type = "text" id = "ercamp" placeholder = "pid"/><br>
+					<label> log in as </label>
+					<input class = "custom-action" type = "text" placeholder = "pid"/><br>
+					<label> log in as </label>
+					<input class = "custom-action" type = "text" placeholder = "pid"/><br>
+					<label> log in as </label>
+					<input class = "custom-action" type = "text" placeholder = "pid"/><br>
 				</p>
 			</fieldset>
 		</form>
-		<button type="submit" formid="set_uid" formaction="register.html"> 點我登入 </button> 
-	</div>
-	<div>
-		<a id = "unregister" href="product.html">  </a>
-		<button type="button"> 我不登入 </button> 
+		<button type="submit" formid="setDefault" formaction="register.html"> 點我登入 </button> 
 	</div>
 </body>
 </html>
