@@ -1,4 +1,5 @@
-erjsTesting
-===========
+# Readme.md
 
-Testing project for er.js
+- Welcome to Etu Insight
+- How to use test python codes
+- 

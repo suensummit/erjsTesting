@@ -1,5 +1,5 @@
 from selenium import webdriver
-from 
+from pandas as pd
 import csv
 import time
 
