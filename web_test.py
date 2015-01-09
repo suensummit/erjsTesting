@@ -39,9 +39,6 @@ for k in range(len(df)-2):
 	# Take screenshot for verify
 	driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
 
-#driver.find_element_by_id().send_keys()
-#driver.find_element_by_id().click()
-
 for k in range(len(ssid)-1):
 	driver[ssid[k]].quit
 
