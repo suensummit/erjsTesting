@@ -2,5 +2,14 @@
 
 Welcome to Etu Insight! This document will show you how to use ```python + selenium + phantomjs``` to simulating user behavior and verify the whole software functionality.
 
+- Enviorment Setup
+	- python
+	- selenium
+	```pip install selenium```
+	- phantomjs
+	- Firefox
+
 - How to use test python codes
+	- input: csv files
+
 - 
