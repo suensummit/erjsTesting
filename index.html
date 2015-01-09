@@ -23,29 +23,40 @@
 	</div>
 	<br>
 	<br>
-	<div>
-		<form id = "setDefault">
-			<fieldset>
-				<legend> default </legend>
-				<p>
-					<label> cid </label>
-					<input class = "custom-action" type = "text" id = "cid" placeholder = "cid" value = "saas_testing_ec"/><br>
-					<label> log in as </label>
-					<input class = "custom-action" type = "text" id = "pid" placeholder = "pid"/><br>
-					<label> log in as </label>
-					<input class = "custom-action" type = "text" id = "act" placeholder = "act"/><br>
-					<label> log in as </label>
-					<input class = "custom-action" type = "text" id = "ercamp" placeholder = "pid"/><br>
-					<label> log in as </label>
-					<input class = "custom-action" type = "text" placeholder = "pid"/><br>
-					<label> log in as </label>
-					<input class = "custom-action" type = "text" placeholder = "pid"/><br>
-					<label> log in as </label>
-					<input class = "custom-action" type = "text" placeholder = "pid"/><br>
-				</p>
-			</fieldset>
-		</form>
-		<button type="submit" formid="setDefault" formaction="register.html"> 點我登入 </button> 
+	<div id = "setDefault">
+		<legend> default </legend>
+		<label> fill </label>
+		<input class = "custom-action" type = "text" id = "dcid" placeholder = "cid" value = "saas_testing_ec"/><br>
+		<label> fill </label>
+		<input class = "default-action" type = "text" id = "duid" placeholder = "uid" value = "testbot"/><br>
+		<label> fill </label>
+		<input class = "default-action" type = "text" id = "dact" placeholder = "act" value = "VIEW"/><br>
+		<label> fill </label>
+		<input class = "default-action" type = "text" id = "dcat" placeholder = "cat" value = "testing"/><br>
+		<label> fill </label>
+		<input class = "default-action" type = "text" id = "dpid" placeholder = "pid" value = "test"/><br>
+		<label> fill </label>
+		<input class = "default-action" type = "text" id = "deruid" placeholder = "eruid" value = ""/><br>
+		<p></p>
+	</div>
+	<br>
+	<br>
+	<div id = "setAction">
+		<legend> action </legend>
+		<label> fill </label>
+		<input class = "custom-action" type = "text" id = "cid" placeholder = "cid" value = "saas_testing_ec"/><br>
+		<label> fill </label>
+		<input class = "custom-action" type = "text" id = "uid" placeholder = "uid"/><br>
+		<label> fill </label>
+		<input class = "custom-action" type = "text" id = "act" placeholder = "act"/><br>
+		<label> fill </label>
+		<input class = "custom-action" type = "text" id = "cat" placeholder = "cat"/><br>
+		<label> fill </label>
+		<input class = "custom-action" type = "text" id = "pid" placeholder = "pid"/><br>
+		<label> fill </label>
+		<input class = "custom-action" type = "text" id = "eruid" placeholder = "eruid"/><br>
+		<p></p>
+		<button type="submit" formid="setDefault" formaction="register.html"> 送出資料 </button> 
 	</div>
 </body>
 </html>
