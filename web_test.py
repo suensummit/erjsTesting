@@ -34,8 +34,8 @@ for k in range(len(df)-2):
 	driver[df.ssid[k]].find_element_by_id('cat').send_keys(df.cat[k])
 	driver[df.ssid[k]].find_element_by_id('pid').send_keys(df.pid[k])
 	driver[df.ssid[k]].find_element_by_id('eruid').send_keys(df.eruid[k])
-	print 'It is the ' + str(k+1) + 'th testbot\n'
-	#driver[df.ssid[k].find_element_by_id().click()
+	#print 'It is the ' + str(k+1) + 'th testbot\n'
+	#driver[df.ssid[k].find_element_by_id('sendAction').click()
 	# Take screenshot for verify
 	driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
 
