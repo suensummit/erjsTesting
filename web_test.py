@@ -5,18 +5,15 @@ import time
 
 # load test data
 with open('web_test_funnel.csv', 'rb') as f:
-<<<<<<< HEAD
 	reader = csv.reader(f)
 	testbot_raw = list(reader)
 
 testbot = sorted(testbot_raw, key=lambda testbot_raw: testbot_raw[2])
 df = DataFrame(testbot, columns = testbot[len(testbot)-1])
-=======
     reader = csv.reader(f)
     testbot_raw = list(reader)
 
 testbot = sorted(testbot_raw, key=lambda testbot_raw: testbot_raw[2])
->>>>>>> 82c79e6d1cf251b2cc0ac893bac2e477b04cfc06
 
 # set test sample ec url
 url = "file:///Users/summitsuen/Documents/erjsTesting/index.html"
@@ -59,7 +56,6 @@ for x in ssid:
 		driver[x].get(url)
 		driver[x].find_element_by_id().click()
 		driver[x].quit()
->>>>>>> 82c79e6d1cf251b2cc0ac893bac2e477b04cfc06
 
 #driver.find_element_by_id().send_keys()
 #driver.find_element_by_id().click()
