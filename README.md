@@ -6,8 +6,8 @@ Welcome to Etu Insight! This document will show you how to use ```python + selen
 	- python
 	- selenium
 	```pip install selenium```
-	- phantomjs
-	- Firefox
+	- Firefox (default bouwser driver in selenium)
+	- phantomjs (quick and lightweight alternative)
 
 - How to use test python codes
 	- input: csv files
