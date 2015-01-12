@@ -18,6 +18,32 @@
 	<script id="etu-recommender" type="text/javascript">
     	var erHostname='210.63.38.209';
 		var erUrlPrefix='210.63.38.209';//for local test
+
+		var _qevents = _qevents || [];
+
+		_qevents.push({ 
+			cid : 'user-behavior-com',
+        	act : 'view',
+        	pid : '145510',
+        	cat : 'cat01',
+        	abc : 'aaaa',
+        	group : 'UDN',
+        	ptuple : [
+        	{
+        		paypid:"U049132",
+				qty:"1",
+				unit_price:"100",
+				pcat:"A,A01,A01_001",
+				pmk:"discount,festival"
+			}]
+        	//plist : '1377003,1,99',
+        	//oid : 'orderdh003'
+        });
+        
+    	function getCustomizeActionData(){
+
+    	}
+
 	</script>
 </head>
 <body>
