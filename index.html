@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html>
 <head>
-	<script id="TEST-erjs" type="text/javascript">
+	<!--script id="TEST-erjs" type="text/javascript">
 		window.onload = function(){
 			getCustomizeActionData();
 		}
@@ -15,7 +15,7 @@
 			}
 			console.log("qevent: "+temp_qevent);
 		}
-	</script>
+	</script-->
 	<script id="etu-recommender" type="text/javascript">
     	var erHostname='210.63.38.209';
 		var erUrlPrefix='210.63.38.209';//for local test
@@ -23,6 +23,7 @@
 
 		_qevents.push({ 
 			cid : document.getElementById("dcid").value,
+			uid : document.getElementById("duid").value,
         	act : document.getElementById("dact").value,
         	pid : document.getElementById("dpid").value,
         	cat : document.getElementById("dcat").value,
@@ -33,7 +34,9 @@
 				unit_price : document.getElementById("dunit_price").value,
 				pcat : document.getElementById("dpcat").value,
 				pmk : document.getElementById("dpmk").value,
-			}]
+			}],
+			ercamp : document.getElementById("dercamp").value,
+			erad : document.getElementById("derad").value,
         });
         
         var erUrlPrefix=('https:' == document.location.protocol ?'https://':'http://')+erHostname+'/';
@@ -41,18 +44,21 @@
     	function ERsend(){
     		_qevents = [];
     		_qevents.push({ 
-				cid : document.getElementById("dcid").value,
-	        	act : document.getElementById("dact").value,
-    	    	pid : document.getElementById("dpid").value,
-        		cat : document.getElementById("dcat").value,
+				cid : document.getElementById("acid").value,
+				uid : document.getElementById("auid").value,
+	        	act : document.getElementById("aact").value,
+    	    	pid : document.getElementById("apid").value,
+        		cat : document.getElementById("acat").value,
         		ptuple : [
         		{
-        			paypid : document.getElementById("dpaypid").value,
-					qty : document.getElementById("dqty").value,
-					unit_price : document.getElementById("dunit_price").value,
-					pcat : document.getElementById("dpcat").value,
-					pmk : document.getElementById("dpmk").value,
-				}]
+        			paypid : document.getElementById("apaypid").value,
+					qty : document.getElementById("aqty").value,
+					unit_price : document.getElementById("aunit_price").value,
+					pcat : document.getElementById("apcat").value,
+					pmk : document.getElementById("apmk").value,
+				}],
+				ercamp : document.getElementById("aercamp").value,
+				erad : document.getElementById("aerad").value,
         	});
 
 	    	_qquery1 = [];
@@ -94,7 +100,7 @@
 	<div id = "setDefault">
 		<legend> default </legend>
 		<label> fill </label>
-		<input class = "custom-action" type = "text" id = "dcid" placeholder = "cid" value = "saas_testing_ec"/><br>
+		<input class = "default-action" type = "text" id = "dcid" placeholder = "cid" value = "saas_testing_ec"/><br>
 		<label> fill </label>
 		<input class = "default-action" type = "text" id = "duid" placeholder = "uid" value = "testbot"/><br>
 		<label> fill </label>
@@ -104,19 +110,15 @@
 		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dpid" placeholder = "pid" value = "test"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "deruid" placeholder = "eruid" value = ""/><br>
-		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dpcat" placeholder = "pcat" value = ""/><br>
 		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dpaypid" placeholder = "paypid" value = ""/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dqty" placeholder = "qty" value = ""/><br>
-		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dunit_price" placeholder = "unit_price" value = ""/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "doid" placeholder = "oid" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dpmk" placeholder = "pmk" value = ""/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "damt" placeholder = "amt" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dqty" placeholder = "qty" value = ""/><br>
 		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dercamp" placeholder = "ercamp" value = ""/><br>
 		<label> fill </label>
@@ -139,25 +141,21 @@
 		<label> fill </label>
 		<input class = "custom-action" type = "text" id = "apid" placeholder = "pid" value = ""/><br>
 		<label> fill </label>
-		<input class = "custom-action" type = "text" id = "aeruid" placeholder = "eruid" value = ""/><br>
-		<label> fill </label>
 		<input class = "custom-action" type = "text" id = "apcat" placeholder = "pcat" value = ""/><br>
 		<label> fill </label>
 		<input class = "custom-action" type = "text" id = "apaypid" placeholder = "paypid" value = ""/><br>
 		<label> fill </label>
-		<input class = "custom-action" type = "text" id = "aqty" placeholder = "qty" value = ""/><br>
-		<label> fill </label>
 		<input class = "custom-action" type = "text" id = "aunit_price" placeholder = "unit_price" value = ""/><br>
 		<label> fill </label>
-		<input class = "custom-action" type = "text" id = "aoid" placeholder = "oid" value = ""/><br>
+		<input class = "custom-action" type = "text" id = "apmk" placeholder = "pmk" value = ""/><br>
 		<label> fill </label>
-		<input class = "custom-action" type = "text" id = "aamt" placeholder = "amt" value = ""/><br>
+		<input class = "custom-action" type = "text" id = "aqty" placeholder = "qty" value = ""/><br>
 		<label> fill </label>
 		<input class = "custom-action" type = "text" id = "aercamp" placeholder = "ercamp" value = ""/><br>
 		<label> fill </label>
 		<input class = "custom-action" type = "text" id = "aerad" placeholder = "erad" value = ""/><br>
 		
-		<button type="submit" formid="setDefault" formaction="register.html"> 送出資料 </button> 
+		<button type="submit" class = "custom-action" id="custom-click" formaction="register.html"> 送出資料 </button> 
 	</div>
 </body>
 </html>
