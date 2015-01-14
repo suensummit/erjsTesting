@@ -22,21 +22,21 @@
 		var _qevents = _qevents || [];
 
 		_qevents.push({ 
-			cid : document.getElementById("dcid").value,
-			uid : document.getElementById("duid").value,
-        	act : document.getElementById("dact").value,
-        	pid : document.getElementById("dpid").value,
-        	cat : document.getElementById("dcat").value,
+			cid : "saas_testing_ec",
+			uid : "testbot",
+        	act : "VIEW",
+        	pid : "testproduct",
+        	cat : "testcat",
         	ptuple : [
         	{
-        		paypid : document.getElementById("dpaypid").value,
-				qty : document.getElementById("dqty").value,
-				unit_price : document.getElementById("dunit_price").value,
-				pcat : document.getElementById("dpcat").value,
-				pmk : document.getElementById("dpmk").value,
+        		paypid : "testpay",
+				qty : "1",
+				unit_price : "12345",
+				pcat : "testpcat",
+				pmk : "testpromo",
 			}],
-			ercamp : document.getElementById("dercamp").value,
-			erad : document.getElementById("derad").value,
+			ercamp : "testcamp",
+			erad : "testad",
         });
         
         var erUrlPrefix=('https:' == document.location.protocol ?'https://':'http://')+erHostname+'/';
@@ -77,6 +77,7 @@
         	/** Send action **/
     		ER.track.send(_qevents, [], '', _qqueryList);
     		}
+
     	(function() {
     		var er = document.createElement('script');
         	er.type = 'text/javascript';
@@ -85,8 +86,10 @@
         	var currentJs=document.getElementById('etu-recommender');
         	currentJs.parentNode.insertBefore(er,currentJs);
     	})();
-    	//function getCustomizeActionData(){
-    	//}
+
+    	function getCustomizeActionData(){
+
+    	}
 
 	</script>
 </head>
@@ -106,23 +109,23 @@
 		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dact" placeholder = "act" value = "VIEW"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dcat" placeholder = "cat" value = "testing"/><br>
+		<input class = "default-action" type = "text" id = "dcat" placeholder = "cat" value = "testcat"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dpid" placeholder = "pid" value = "test"/><br>
+		<input class = "default-action" type = "text" id = "dpid" placeholder = "pid" value = "testproduct"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dpcat" placeholder = "pcat" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dpcat" placeholder = "pcat" value = "testpcat"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dpaypid" placeholder = "paypid" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dpaypid" placeholder = "paypid" value = "testpay"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dunit_price" placeholder = "unit_price" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dunit_price" placeholder = "unit_price" value = "12345"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dpmk" placeholder = "pmk" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dpmk" placeholder = "pmk" value = "testpromo"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dqty" placeholder = "qty" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dqty" placeholder = "qty" value = "1"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "dercamp" placeholder = "ercamp" value = ""/><br>
+		<input class = "default-action" type = "text" id = "dercamp" placeholder = "ercamp" value = "testcamp"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "derad" placeholder = "erad" value = ""/><br>
+		<input class = "default-action" type = "text" id = "derad" placeholder = "erad" value = "testad"/><br>
 		
 		<p></p>
 	</div>
@@ -154,8 +157,7 @@
 		<input class = "custom-action" type = "text" id = "aercamp" placeholder = "ercamp" value = ""/><br>
 		<label> fill </label>
 		<input class = "custom-action" type = "text" id = "aerad" placeholder = "erad" value = ""/><br>
-		
-		<button type="submit" class = "custom-action" id="custom-click" formaction="register.html"> 送出資料 </button> 
+		<button class = "test" type = "button" id="custom-click" onclick = "ERsend()"> 送出資料 </button>
 	</div>
 </body>
 </html>
