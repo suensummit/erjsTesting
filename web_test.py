@@ -30,6 +30,8 @@ while k < len(ssid)-1:
 # send actions from testbot
 for k in range(len(df)-2):
 	driver[df.ssid[k]].get(url)
+	#driver[df.ssid[k]].find_element_by_id('agroup').send_keys('ER')
+	#driver[df.ssid[k]].find_element_by_id('acid').send_keys('ER_web-testing')
 	driver[df.ssid[k]].find_element_by_id('auid').send_keys(df.uid[k])
 	driver[df.ssid[k]].find_element_by_id('aact').send_keys(df.act[k])
 	driver[df.ssid[k]].find_element_by_id('acat').send_keys(df.cat[k])
