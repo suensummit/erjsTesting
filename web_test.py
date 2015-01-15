@@ -44,7 +44,7 @@ for k in range(len(df)-2):
 	#print 'It is the ' + str(k+1) + 'th testbot\n'
 	driver[df.ssid[k]].find_element_by_id('custom-click').click()
 	# Take screenshot for verify
-	driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
+	#driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
 
 for k in range(len(ssid)-1):
 	driver[ssid[k]].quit
