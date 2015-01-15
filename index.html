@@ -22,6 +22,7 @@
 		var _qevents = _qevents || [];
 
 		_qevents.push({ 
+			group : "ER",
 			cid : "saas_testing_ec",
 			uid : "testbot",
         	act : "VIEW",
@@ -44,6 +45,7 @@
     	function ERsend(){
     		_qevents = [];
     		_qevents.push({ 
+    			group : document.getElementById("agroup").value,
 				cid : document.getElementById("acid").value,
 				uid : document.getElementById("auid").value,
 	        	act : document.getElementById("aact").value,
@@ -102,9 +104,11 @@
 	<div id = "setDefault">
 		<legend> default </legend>
 		<label> fill </label>
+		<input class = "default-action" type = "text" id = "dgroup" placeholder = "group" value = "ER"/><br>
+		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dcid" placeholder = "cid" value = "saas_testing_ec"/><br>
 		<label> fill </label>
-		<input class = "default-action" type = "text" id = "duid" placeholder = "uid" value = "testbot"/><br>
+		<input class = "default-action" type = "text" id = "duid" placeholder = "uid" value = ""/><br>
 		<label> fill </label>
 		<input class = "default-action" type = "text" id = "dact" placeholder = "act" value = "VIEW"/><br>
 		<label> fill </label>
