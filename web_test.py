@@ -42,7 +42,7 @@ for k in range(len(df)-2):
 	driver[df.ssid[k]].find_element_by_id('aercamp').send_keys(df.ERCAMP[k])
 	driver[df.ssid[k]].find_element_by_id('aerad').send_keys(df.ERAD[k])
 	#print 'It is the ' + str(k+1) + 'th testbot\n'
-	driver[df.ssid[k].find_element_by_id('custom-click').click()
+	driver[df.ssid[k]].find_element_by_id('custom-click').click()
 	# Take screenshot for verify
 	driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
 
