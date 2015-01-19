@@ -39,6 +39,7 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	- input: 
 		- csv files which describe actions for each robot.
 		- python script which control the robots.
+		
 		Put them all together under your test project directory.
 
 	- example: 
