@@ -36,7 +36,10 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 
 - ## Test Data Preparation
 
-	- input: csv files which describe actions for each robot.
+	- input: 
+		- csv files which describe actions for each robot.
+		- python script which control the robots.
+		Put them all together under your test project directory.
 
 	- example: 
 
@@ -69,7 +72,6 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 
 	```
 	### run the python script under project folder 
-	### (where the csv files and python script locates)
 	$ python web_test.py
 	```
 
