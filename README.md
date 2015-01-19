@@ -1,6 +1,6 @@
 # ER/EI End-to-End Test
 
-Welcome to Etu Insight! This document will show you how to use ```python + selenium + phantomjs``` to simulating user behavior and verify the whole software functionality.
+Welcome to Etu Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
 
 - Enviorment Setup
 	- python
@@ -34,7 +34,14 @@ Welcome to Etu Insight! This document will show you how to use ```python + selen
 	```
 
 - How to use test python codes
-	- input: csv files
-	- format: [example](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv)
-
+	- input: csv files [example](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv)
+	- format: 
+	|------|------|------|-----|-------|----|-----|-----|-----|------|--------|-----|------------|-----|-----|--------|------|
+	| date | Time | ssid | uid | eruid | lo | act | cat | pid | pcat | paypid | qty | unit_price | oid | amt | ERCAMP | ERAD |
+	|------|------|------|-----|-------|----|-----|-----|-----|------|--------|-----|------------|-----|-----|--------|------|
+	| 1201 | 11:10 | S01 | U01 | ERU01 | 0 | VIEW | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5" | PID01 |  |  |  |  |  |  | CAMP1 | AD1.1 |
+	|------|------|------|-----|-------|----|-----|-----|-----|------|--------|-----|------------|-----|-----|--------|------|
+	| 1201 | 11:30 | S02 | U02 | ERU02 | 0 | VIEW | "CAT02_1,CAT02_2,CAT02_3,CAT02_4,CAT02_5" | PID02 |  |  |  |  |  |  | CAMP2 | AD2.1 |
+	|------|------|------|-----|-------|----|-----|-----|-----|------|--------|-----|------------|-----|-----|--------|------|
+	
 - 
