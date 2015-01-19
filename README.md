@@ -3,6 +3,7 @@
 Welcome to Etu Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
 
 - ## Enviorment Setup
+
 	- python
 	```
 	# install homebrew first
@@ -34,6 +35,7 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	```
 
 - ## Test Data Preparation
+
 	- input: csv files which describe actions for each robot.
 
 	- example: 
@@ -64,3 +66,8 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	| 1201 | 18:10 | S09 | U09 | ERU09 | 1 | ORDER |  |  | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5" | PID01 | 2 | 100 | O01 | 200 |  |  |
 
 - ## How to use test python codes
+
+	```
+	python web_test.py
+	```
+
