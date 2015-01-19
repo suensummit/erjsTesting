@@ -4,7 +4,11 @@ import csv
 import time
 
 # load test data
-with open('web_test_funnel.csv', 'rb') as f:
+
+#with open('web_test_cat.csv', 'rb') as f:
+#with open('web_test_src.csv', 'rb') as f:
+#with open('web_test_funnel.csv', 'rb') as f:
+with open('web_test_camp.csv', 'rb') as f:
 	reader = csv.reader(f)
 	testbot_raw = list(reader)
 
