@@ -1,4 +1,4 @@
-# ER/EI End-to-End Test
+# Etu Recommander/Etu Insight End-to-End Test
 
 Welcome to Etu Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
 
@@ -19,7 +19,7 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	$ pip install selenium
 	```
 
-	- Firefox (default bouwser driver in selenium)
+	- firefox (default bouwser driver in selenium)
 	```
 	### install brew-cask first
 	$ brew tap phinze/homebrew-cask
@@ -36,13 +36,35 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 
 - ## Test Data Preparation
 
-	- input: 
-		- csv files which describe actions for each robot.
-		- python script which control the robots.
+	- Input: 
+		- csv files `web_test_[camp/cat/src/funnel].csv` which describe actions for each robot.
+		- python script `web_test.py` which control the robots.
 		
 		Put them all together under your test project directory.
 
-	- example: 
+	- Format: 
+
+	| Field | Type | Description |
+	|---|---|---|
+	| date | timestamp | Date of action |
+	| Time | timestamp | Time of action |
+	| ssid | string | Session ID |
+	| uid | string | User ID |
+	| eruid | string | Tracking UID |
+	| lo | boolean | Login flag |
+	| act | string | Action |
+	| cat | string | Category (view) |
+	| pid | string | Product ID (view) |
+	| pcat | string | Category (payment) |
+	| paypid | string | Product ID (payment) |
+	| qty | int | Order quantity |
+	| unit_price | int | Price of each product |
+	| oid | string | Order ID |
+	| amt | int | Total amount of payment |
+	| ERCAMP | string | Campaign ID |
+	| ERAD | string | Advertising ID |
+
+	- Example: 
 
 	| date | Time | ssid | uid | eruid | lo | act | cat | pid | pcat | paypid | qty | unit_price | oid | amt | ERCAMP | ERAD |
 	|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
