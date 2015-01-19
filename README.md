@@ -3,7 +3,7 @@
 Welcome to Etu Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
 
 - ## Enviorment Setup
-	- ### python
+	- python
 	```
 	# install homebrew first
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -13,12 +13,12 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	brew install python
 	```
 
-	- ### selenium
+	- selenium
 	```
 	pip install selenium
 	```
 
-	- ### Firefox (default bouwser driver in selenium)
+	- Firefox (default bouwser driver in selenium)
 	```
 	# install brew-cask first
 	brew tap phinze/homebrew-cask
@@ -28,15 +28,15 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	brew cask install firefox
 	```
 
-	- ### phantomjs (quick and lightweight alternative)
+	- phantomjs (quick and lightweight alternative)
 	```
 	brew update && brew install phantomjs
 	```
 
 - ## Test Data Preparation
-	- ### input: csv files [example](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv)
+	- input: csv files [example](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv)
 
-	- ### format: 
+	- format: 
 
 	| date | Time | ssid | uid | eruid | lo | act | cat | pid | pcat | paypid | qty | unit_price | oid | amt | ERCAMP | ERAD |
 	|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
