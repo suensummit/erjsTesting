@@ -12,10 +12,12 @@ Welcome to Etu Insight! This document will show you how to use ```python + selen
 	# install python via homebrew
 	brew install python
 	```
+
 	- selenium
 	```
 	pip install selenium
 	```
+
 	- Firefox (default bouwser driver in selenium)
 	```
 	# install brew-cask first
@@ -24,6 +26,8 @@ Welcome to Etu Insight! This document will show you how to use ```python + selen
 
 	# install firefox via brew-cask
 	brew cask install firefox
+	```
+
 	- phantomjs (quick and lightweight alternative)
 	```
 	brew update && brew install phantomjs
@@ -31,6 +35,6 @@ Welcome to Etu Insight! This document will show you how to use ```python + selen
 
 - How to use test python codes
 	- input: csv files
-	- format: (example)[https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv]
+	- format: [example](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv)
 
 - 
