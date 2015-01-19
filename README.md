@@ -44,10 +44,10 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	| 1201 | 11:30 | S02 | U02 | ERU02 | 0 | VIEW | "CAT02_1,CAT02_2,CAT02_3,CAT02_4,CAT02_5" | PID02 |  |  |  |  |  |  | CAMP2 | AD2.1 |
 	| 1201 | 11:50 | S03 |  | ERU03 | 0 | VIEW | "CAT03_1,CAT03_2,CAT03_3,CAT03_4,CAT03_5" | PID03 |  |  |  |  |  |  | CAMP1 | AD1.2 |
 	| 1201 | 12:10 | S04 |  | ERU04 | 0 | VIEW | "CAT04_1,CAT04_2,CAT04_3,CAT04_4,CAT04_5" | PID04 |  |  |  |  |  |  | CAMP2 | AD2.1 |
-	| 1201 | 12:30 | S05 |  | ERU05 | 0 | VIEW | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5",PID01 |  |  |  |  |  |  | CAMP2 | AD2.1 |
+	| 1201 | 12:30 | S05 |  | ERU05 | 0 | VIEW | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5" | PID01 |  |  |  |  |  |  | CAMP2 | AD2.1 |
 	| 1201 | 12:50 | S06 |  | ERU06 | 0 | VIEW | "CAT02_1,CAT02_2,CAT02_3,CAT02_4,CAT02_5" | PID02 |  |  |  |  |  |  | CAMP2 | AD2.3 |
 	| 1201 | 13:10 | S07 |  | ERU07 | 0 | VIEW | "CAT03_1,CAT03_2,CAT03_3,CAT03_4,CAT03_5" | PID03 |  |  |  |  |  |  | CAMP2 | AD2.2 |
-	| 1201 | 13:30 | S08 | U08 | ERU08 | 0 | VIEW | "CAT04_1,CAT04_2,CAT04_3,CAT04_4,CAT04_5",PID04 |  |  |  |  |  |  | CAMP1 | AD1.3 |
+	| 1201 | 13:30 | S08 | U08 | ERU08 | 0 | VIEW | "CAT04_1,CAT04_2,CAT04_3,CAT04_4,CAT04_5" | PID04 |  |  |  |  |  |  | CAMP1 | AD1.3 |
 	| 1201 | 13:50 | S08 | U08 | ERU08 | 0 | VIEW | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5" | PID04 |  |  |  |  |  |  | CAMP1 | AD1.3 |
 	| 1201 | 14:10 | S09 | U09 | ERU09 | 1 | VIEW | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5" | PID01 |  |  |  |  |  |  | CAMP2 | AD2.2 |
 	| 1201 | 14:30 | S10 | U10 | ERU10 | 1 | VIEW | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5" | PID01 |  |  |  |  |  |  | CAMP2 | AD2.2 |
