@@ -68,7 +68,8 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 - ## How to use test python codes
 
 	```
-	### run the python script under project folder (where csv files and python script locates)
+	### run the python script under project folder 
+	### (where the csv files and python script locates)
 	$ python web_test.py
 	```
 
