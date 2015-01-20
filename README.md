@@ -175,4 +175,4 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 	```
 
 ---
-2015-01-20 edited by [Summit Suen](https://github.com/suensummit)
+2015-01-20 last edited by [Summit Suen](https://github.com/suensummit)
