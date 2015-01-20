@@ -65,7 +65,7 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 	| ERCAMP | string | Campaign ID |
 	| ERAD | string | Advertising ID |
 
-	- Example: 
+	- Example: [web_test_funnel.csv](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv)
 
 	| date | Time | ssid | uid | eruid | lo | act | cat | pid | pcat | paypid | qty | unit_price | oid | amt | ERCAMP | ERAD |
 	|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
