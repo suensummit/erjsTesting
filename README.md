@@ -91,10 +91,87 @@ Welcome to Etu Insight! This document will show you how to use `python + seleniu
 	| 1201 | 17:50 | S13 | U13 | ERU13 | 1 | CART |  |  | "CAT04_1,CAT04_2,CAT04_3,CAT04_4,CAT04_5" | PID04 | 1 | 400 |  | 400 |  |  |
 	| 1201 | 18:10 | S09 | U09 | ERU09 | 1 | ORDER |  |  | "CAT01_1,CAT01_2,CAT01_3,CAT01_4,CAT01_5" | PID01 | 2 | 100 | O01 | 200 |  |  |
 
-- ## How to use test python codes
+- ## Usage
 
 	```
 	### run the python script under project folder 
 	$ python web_test.py
 	```
 
+- ## Lookup Python Script Step-by-step
+
+	- Import dependency libraries
+	```
+	from selenium import webdriver
+	from pandas import *
+	import csv
+	import time
+	```
+
+	- Load test csv data for different scenario
+	```
+	#with open('web_test_cat.csv', 'rb') as f: 
+	#with open('web_test_src.csv', 'rb') as f:
+	#with open('web_test_funnel.csv', 'rb') as f:
+	with open('web_test_camp.csv', 'rb') as f:
+	reader = csv.reader(f)
+	testbot_raw = list(reader)
+	```
+
+	- Build up well-structured robot dataframe
+	```
+	testbot = sorted(testbot_raw, key=lambda testbot_raw: testbot_raw[2])
+	df = DataFrame(testbot, columns = testbot[len(testbot)-1])
+	```
+
+	- Target url setting and initializing web browser driver(s)
+	```
+	url = "http://localhost/"
+	#url = "file:///Users/summitsuen/Documents/erjsTesting/index.html"
+	#url = "https://suensummit.github.io/erjsTesting/"
+
+	# initialize drivers
+	driver = {}
+	k = 0
+	ssid = df.ssid.unique()
+	while k < len(ssid)-1:
+		key = ssid[k]
+		value = webdriver.PhantomJS()
+		#value = webdriver.Firefox()
+		driver[key] = value
+		k += 1
+	```
+
+	- Send actions from robot dataframe
+	```
+	# send actions from testbot
+	for k in range(len(df)-2):
+		driver[df.ssid[k]].get(url)
+		driver[df.ssid[k]].find_element_by_id('agroup').send_keys("ER")
+		driver[df.ssid[k]].find_element_by_id('acid').send_keys("ER_web_testing")
+		driver[df.ssid[k]].find_element_by_id('auid').send_keys(df.uid[k])
+		if df.lo[k] == '0':
+			driver[df.ssid[k]].find_element_by_id('auid').send_keys("")
+			pass
+		driver[df.ssid[k]].find_element_by_id('aact').send_keys(df.act[k])
+		driver[df.ssid[k]].find_element_by_id('acat').send_keys(df.cat[k])
+		driver[df.ssid[k]].find_element_by_id('apid').send_keys(df.pid[k])
+		driver[df.ssid[k]].find_element_by_id('apcat').send_keys(df.pcat[k])
+		driver[df.ssid[k]].find_element_by_id('apaypid').send_keys(df.paypid[k])
+		driver[df.ssid[k]].find_element_by_id('aunit_price').send_keys(df.unit_price[k])
+		#driver[df.ssid[k]].find_element_by_id('apmk').send_keys(df.pmk[k])
+		driver[df.ssid[k]].find_element_by_id('aqty').send_keys(df.qty[k])
+		driver[df.ssid[k]].find_element_by_id('aercamp').send_keys(df.ERCAMP[k])
+		driver[df.ssid[k]].find_element_by_id('aerad').send_keys(df.ERAD[k])
+		#print 'It is the ' + str(k+1) + 'th testbot\n'
+		driver[df.ssid[k]].find_element_by_id('custom-click').click()
+		# Take screenshot for verify
+		#driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
+
+	# close jobs
+	for k in range(len(ssid)-1):
+		driver[ssid[k]].quit
+	```
+
+---
+2015-01-20 edited by [Summit Suen]: https://github.com/suensummit
