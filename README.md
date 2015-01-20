@@ -1,5 +1,4 @@
 Etu Recommander/Insight: End-to-End Test
-
 ===
 
 Welcome to Etu Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
