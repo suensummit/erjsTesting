@@ -2,10 +2,13 @@ from selenium import webdriver
 from pandas import *
 import csv
 import time
+import sys, getopt
 
 # load test data
 
-with open('web_test_cat.csv', 'rb') as f:
+inputfile = str(sys.argv[1])
+with open(inputfile, 'rb') as f:
+#with open('web_test_cat.csv', 'rb') as f:
 #with open('web_test_src.csv', 'rb') as f:
 #with open('web_test_funnel.csv', 'rb') as f:
 #with open('web_test_camp.csv', 'rb') as f:
