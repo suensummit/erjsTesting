@@ -95,8 +95,8 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 - ## Usage
 
 	```
-	### run the python script under project folder 
-	$ python web_test.py
+	### run the python script follow by input filename under project folder 
+	$ python web_test.py web_test_cat.csv
 	```
 
 - ## Lookup Python Script Step-by-step
@@ -149,7 +149,7 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 	for k in range(len(df)-2):
 		driver[df.ssid[k]].get(url)
 		driver[df.ssid[k]].find_element_by_id('agroup').send_keys("ER")
-		driver[df.ssid[k]].find_element_by_id('acid').send_keys("web_testing")
+		driver[df.ssid[k]].find_element_by_id('acid').send_keys("webtesting")
 		driver[df.ssid[k]].find_element_by_id('auid').send_keys(df.uid[k])
 		if df.lo[k] == '0':
 			driver[df.ssid[k]].find_element_by_id('auid').send_keys("")
