@@ -14,7 +14,7 @@ with open(outputfile + '.csv', 'wb') as f:
 	testbotwriter.writerow(['ssid','uid','lo','act','cat','pid','pcat','paypid','qty','unit_price','oid','amt','ERCAMP','ERAD'])
 	for k in range(k):
 		before_login = randint(2,5)
-		after_login = randint(2,5)
+		after_login = 1
 		i = 0
 		while i < before_login:
 			ssid = "s%03d" %(k+1)
@@ -40,14 +40,14 @@ with open(outputfile + '.csv', 'wb') as f:
 			ssid = "s%03d" %(k+1)
 			uid = "u%03d" %(k+1)
 			lo = "1"
-			act = "view"
+			act = "cart"
 			last_cat = randint(0,9)
-			cat = "catA%1d,catB%1d,catC%1d" %(randint(0,9), randint(0,9), last_cat)
-			pid = "pC%1d_%02d" %(last_cat, randint(0,99))
-			pcat = ""
-			paypid = ""
-			qty = ""
-			unit_price = ""
+			pcat = cat
+			paypid = pid
+			cat = ""
+			pid = ""
+			qty = "%d" %(randint(1,5))
+			unit_price = "%d" %(randint(100,10000))
 			oid = ""
 			amt = ""
 			campid = randint(0,9)
