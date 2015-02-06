@@ -18,7 +18,8 @@ with open(outputfile + '.csv', 'wb') as f:
 		i = 0
 		while i < before_login:
 			ssid = "s%03d" %(k+1)
-			uid = "u%03d" %(k+1)
+			uid = ""
+			#uid = "u%03d" %(k+1)
 			lo = "0"
 			act = "view"
 			last_cat = randint(0,9)

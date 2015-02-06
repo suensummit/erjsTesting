@@ -32,23 +32,28 @@ with open(outputfile + '.csv', 'wb') as f:
 			amt = ""
 			campid = randint(0,9)
 			ERCAMP = "camp%02d" %(campid)
-			ERAD = "ad%02d_%02d" %(campid, randint(0,99))
+			adid = randint(0,99)
+			ERAD = "ad%02d_%02d" %(campid, adid)
 			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
 			i = i + 1
 		j = 0
 		while j < after_login:
 			ssid = "s%03d" %(k+1)
 			uid = "u%03d" %(k+1)
-			lo = "1"
 			act = "cart"
 			pcat = cat
 			paypid = pid
 			cat = ""
 			pid = ""
-			qty = "%d" %(randint(1,5))
-			unit_price = "%d" %(randint(100,10000))
+			nqty = randint(1,5)
+			qty = "%d" %(nqty)
+			nprice = randint(100,10000)
+			unit_price = "%d" %(nprice)
 			oid = ""
 			amt = ""
 			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
+			act = "order"
+			oid = "o"+uid+time.strftime("%Y%m%d%H%M%S")
+			amt = "%d" %(nqty*nprice)
+			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
 			j = j + 1
-
