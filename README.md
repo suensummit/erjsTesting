@@ -3,7 +3,7 @@ ER End-to-End Test
 
 Welcome to Etu Recommander/Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
 
-(http://localhost)
+[localhost](http://localhost)
 
 - ## Enviorment Setup
 
