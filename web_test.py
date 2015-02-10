@@ -20,7 +20,7 @@ testbot = sorted(testbot_raw, key=lambda testbot_raw: testbot_raw[2])
 df = DataFrame(testbot, columns = testbot[len(testbot)-1])
 
 # set test sample ec url
-#preurl = "https://www.facebook.com/"
+preurl = "http://locallhost.com/"
 url = "http://localhost/"
 #url = "file:///Users/summitsuen/Documents/erjsTesting/index.html"
 #url = "https://suensummit.github.io/erjsTesting/"
@@ -38,8 +38,8 @@ while k < len(ssid)-1:
 
 # send actions from testbot
 for k in range(len(df)-2):
-	driver[df.ssid[k]].get(url)
-	#driver[df.ssid[k]].add_cookie({'referrer': preurl});
+	driver[df.ssid[k]].get(preurl)
+	driver[df.ssid[k]].find_element_by_link_text('http://localhost/').click()
 	driver[df.ssid[k]].find_element_by_id('agroup').send_keys("ER")
 	driver[df.ssid[k]].find_element_by_id('acid').send_keys("webtesting")
 	driver[df.ssid[k]].find_element_by_id('auid').send_keys(df.uid[k])
