@@ -3,7 +3,7 @@ import csv
 import time
 import sys
 import getopt
-from random import randint
+from random import *
 
 outputfile = str(sys.argv[1])
 k = int(sys.argv[2])
@@ -11,9 +11,9 @@ k = int(sys.argv[2])
 with open(outputfile + '.csv', 'wb') as f:
 	testbotwriter = csv.writer(f)
 	#testbot_raw = list()
-	testbotwriter.writerow(['ssid','uid','lo','act','cat','pid','pcat','paypid','qty','unit_price','oid','amt','ERCAMP','ERAD'])
+	testbotwriter.writerow(['ssid','uid','lo','act','cat','pid','pcat','paypid','qty','unit_price','eturec','oid','amt','ERCAMP','ERAD'])
 	for k in range(k):
-		before_cart = randint(2,5)
+		before_cart = randint(3,8)
 		after_cart = 1
 		i = 0
 		while i < before_cart:
@@ -28,15 +28,21 @@ with open(outputfile + '.csv', 'wb') as f:
 			paypid = ""
 			qty = ""
 			unit_price = ""
+			eturec = "1"
 			oid = ""
 			amt = ""
 			campid = randint(0,9)
 			ERCAMP = "camp%02d" %(campid)
 			adid = randint(0,99)
 			ERAD = "ad%02d_%02d" %(campid, adid)
-			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
+			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,eturec,oid,amt,ERCAMP,ERAD])
 			i = i + 1
-		j = 0
+		# cart with probability
+		if random() < .8:
+			j = 0
+		else:
+			j = 1
+			pass
 		while j < after_cart:
 			ssid = "s%03d" %(k+1)
 			uid = "u%03d" %(k+1)
@@ -51,9 +57,9 @@ with open(outputfile + '.csv', 'wb') as f:
 			unit_price = "%d" %(nprice)
 			oid = ""
 			amt = ""
-			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
+			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,eturec,oid,amt,ERCAMP,ERAD])
 			act = "order"
 			oid = "o"+uid+time.strftime("%Y%m%d%H%M%S")
 			amt = "%d" %(nqty*nprice)
-			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
+			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,eturec,oid,amt,ERCAMP,ERAD])
 			j = j + 1

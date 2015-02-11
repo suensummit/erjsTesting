@@ -54,6 +54,7 @@ for k in range(len(df)-2):
 	driver[df.ssid[k]].find_element_by_id('aunit_price').send_keys(df.unit_price[k])
 	#driver[df.ssid[k]].find_element_by_id('apmk').send_keys(df.pmk[k])
 	driver[df.ssid[k]].find_element_by_id('aqty').send_keys(df.qty[k])
+	driver[df.ssid[k]].find_element_by_id('aeturec').send_keys(df.eturec[k])
 	driver[df.ssid[k]].find_element_by_id('aoid').send_keys(df.oid[k])
 	driver[df.ssid[k]].find_element_by_id('aercamp').send_keys(df.ERCAMP[k])
 	driver[df.ssid[k]].find_element_by_id('aerad').send_keys(df.ERAD[k])

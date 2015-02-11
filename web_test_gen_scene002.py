@@ -13,10 +13,10 @@ with open(outputfile + '.csv', 'wb') as f:
 	#testbot_raw = list()
 	testbotwriter.writerow(['ssid','uid','lo','act','cat','pid','pcat','paypid','qty','unit_price','oid','amt','ERCAMP','ERAD'])
 	for k in range(k):
-		before_login = randint(2,5)
-		after_login = 1
+		before_cart = randint(2,5)
+		after_cart = 1
 		i = 0
-		while i < before_login:
+		while i < before_cart:
 			ssid = "s%03d" %(k+1)
 			uid = "u%03d" %(k+1)
 			lo = "1"
@@ -36,7 +36,7 @@ with open(outputfile + '.csv', 'wb') as f:
 			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
 			i = i + 1
 		j = 0
-		while j < after_login:
+		while j < after_cart:
 			ssid = "s%03d" %(k+1)
 			uid = "u%03d" %(k+1)
 			lo = "1"
