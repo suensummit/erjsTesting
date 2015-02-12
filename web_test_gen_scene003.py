@@ -11,7 +11,7 @@ k = int(sys.argv[2])
 with open(outputfile + '.csv', 'wb') as f:
 	testbotwriter = csv.writer(f)
 	#testbot_raw = list()
-	testbotwriter.writerow(['ssid','uid','lo','act','cat','pid','pcat','paypid','qty','unit_price','oid','amt','ERCAMP','ERAD'])
+	testbotwriter.writerow(['ssid','uid','lo','act','cat','pid','pcat','paypid','qty','unit_price','eturec','oid','amt','ERCAMP','ERAD'])
 	for k in range(k):
 		before_cart = randint(2,5)
 		after_cart = 1
@@ -28,13 +28,14 @@ with open(outputfile + '.csv', 'wb') as f:
 			paypid = ""
 			qty = ""
 			unit_price = ""
+			eturec = ""
 			oid = ""
 			amt = ""
 			campid = randint(0,9)
 			ERCAMP = "camp%02d" %(campid)
 			adid = randint(0,99)
 			ERAD = "ad%02d_%02d" %(campid, adid)
-			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
+			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,eturec,oid,amt,ERCAMP,ERAD])
 			i = i + 1
 		j = 0
 		while j < after_cart:
@@ -51,9 +52,9 @@ with open(outputfile + '.csv', 'wb') as f:
 			unit_price = "%d" %(nprice)
 			oid = ""
 			amt = ""
-			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
+			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,eturec,oid,amt,ERCAMP,ERAD])
 			act = "order"
 			oid = "o"+uid+time.strftime("%Y%m%d%H%M%S")
 			amt = "%d" %(nqty*nprice)
-			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,oid,amt,ERCAMP,ERAD])
+			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,eturec,oid,amt,ERCAMP,ERAD])
 			j = j + 1

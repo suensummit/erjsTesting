@@ -23,7 +23,7 @@ with open(outputfile + '.csv', 'wb') as f:
 			act = "view"
 			last_cat = randint(0,9)
 			cat = "catA%1d,catB%1d,catC%1d" %(randint(0,9), randint(0,9), last_cat)
-			pid = "pC%1d_%02d" %(last_cat, randint(0,99))
+			pid = "pC%1d_%02d" %(last_cat, randint(0,9))
 			pcat = ""
 			paypid = ""
 			qty = ""
@@ -33,7 +33,7 @@ with open(outputfile + '.csv', 'wb') as f:
 			amt = ""
 			campid = randint(0,9)
 			ERCAMP = "camp%02d" %(campid)
-			adid = randint(0,99)
+			adid = randint(0,9)
 			ERAD = "ad%02d_%02d" %(campid, adid)
 			testbotwriter.writerow([ssid,uid,lo,act,cat,pid,pcat,paypid,qty,unit_price,eturec,oid,amt,ERCAMP,ERAD])
 			i = i + 1
