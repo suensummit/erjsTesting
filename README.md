@@ -1,9 +1,7 @@
-ER End-to-End Test
+ER SaaS End-to-End Test
 ===
 
 Welcome to Etu Recommander/Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
-
-[localhost](http://localhost/)
 
 - ## Enviorment Setup
 
@@ -22,7 +20,7 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 	$ pip install selenium
 	```
 
-	- firefox (default bouwser driver in selenium)
+	- firefox (default browser driver in selenium)
 	```
 	### install brew-cask first
 	$ brew tap phinze/homebrew-cask
@@ -39,13 +37,13 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 
 - ## Test Data Preparation
 
-	- Input: 
+	- Input:
 		- csv files `web_test_[camp/cat/src/funnel].csv` which describe actions for each robot.
-		- python script `web_test.py` which control the robots.
-		
+		- python script `web_saas.py` which control the robots.
+
 		Put them all together under your test project directory.
 
-	- Format: 
+	- Format:
 
 	| Field | Type | Description |
 	|---|---|---|
@@ -62,12 +60,13 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 	| paypid | string | Product ID (payment) |
 	| qty | int | Order quantity |
 	| unit_price | int | Price of each product |
+	| eturec | int | rec tag |
 	| oid | string | Order ID |
 	| amt | int | Total amount of payment |
 	| ERCAMP | string | Campaign ID |
 	| ERAD | string | Advertising ID |
 
-	- Example: [web_test_funnel.csv](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_funnel.csv)
+	- Example: [web_test_scene001.csv](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_scene001.csv)
 
 	| date | Time | ssid | uid | eruid | lo | act | cat | pid | pcat | paypid | qty | unit_price | oid | amt | ERCAMP | ERAD |
 	|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -97,8 +96,8 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 - ## Usage
 
 	```
-	### run the python script follow by input filename under project folder 
-	$ python web_test.py web_test_cat.csv
+	### run the python script follow by input filename under project folder
+	$ python web_saas.py web_test_scene001.csv
 	```
 
 - ## Lookup Python Script Step-by-step
@@ -109,16 +108,16 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 	from pandas import *
 	import csv
 	import time
+	import sys
+	import getopt
 	```
 
-	- Load test csv data for different scenario
+	- Load test csv data from input argv for different scenari
 	```
-	#with open('web_test_cat.csv', 'rb') as f: 
-	#with open('web_test_src.csv', 'rb') as f:
-	#with open('web_test_funnel.csv', 'rb') as f:
-	with open('web_test_camp.csv', 'rb') as f:
-	reader = csv.reader(f)
-	testbot_raw = list(reader)
+	inputfile = str(sys.argv[1])
+	with open(inputfile, 'rb') as f:
+		reader = csv.reader(f)
+		testbot_raw = list(reader)
 	```
 
 	- Build up well-structured robot dataframe
@@ -177,4 +176,4 @@ Welcome to Etu Recommander/Insight! This document will show you how to use `pyth
 	```
 
 ---
-2015-01-20 last edited by [Summit Suen](https://github.com/suensummit)
+2015-02-26 last edited by [Summit Suen](https://github.com/suensummit)
