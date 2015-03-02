@@ -140,7 +140,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	- Example: [web_test_scene001.csv](https://github.com/suensummit/erjsTesting/blob/gh-pages/web_test_scene001.csv)
 
 	| ssid | uid  | lo | act  | cat    | pid   | pcat   | paypid | qty | unit_price | eturec | oid | amt | ERCAMP | ERAD |        |         |
-	|------|------|----|------|--------|-------|--------|--------|-----|------------|--------|-----|-----|--------|------|--------|---------|
+	|------|------|----|------|--------|-------|--------|--------|-----|------------|--------|-----|-----|--------|------|
 	| s001 |      | 0  | view | "catA4 ,catB7 ,catC8" | pC8_83 |     |            |        |     |     |        |      | camp06 | ad06_32 |
 	| s001 |      | 0  | view | "catA0 ,catB3 ,catC0" | pC0_06 |     |            |        |     |     |        |      | camp05 | ad05_05 |
 	| s001 |      | 0  | view | "catA2 ,catB7 ,catC0" | pC0_26 |     |            |        |     |     |        |      | camp04 | ad04_98 |
