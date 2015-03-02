@@ -89,8 +89,6 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	[root@master ~]# pip install pandas
 	```
 
----
-
 # Test Data Preparation
 
 [PreDomain](http://210.63.38.209:8099/test_entry.html)
@@ -102,6 +100,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 		- python script `web_saas.py` which control the robots.
 
 		Put them all together under your test project directory.
+
 		```
 		## or simply clone from github
 		$ git clone git@github.com:etusolution/erjsTesting.git
