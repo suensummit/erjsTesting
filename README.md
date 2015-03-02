@@ -102,19 +102,19 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 # Test Data Preparation
 
-	- Input:
+- Input:
 
-		- csv files `web_test_scene00[1-4].csv` which describe actions for each robot.
-		- python script `web_saas.py` which control the robots.
+	- csv files `web_test_scene00{1-4}.csv` which describe actions for each robot.
+	- python script `web_saas.py` which control the robots.
 
-		Put them all together under your test project directory.
+	Put them all together under your test project directory.
 
-		```
-		## or simply clone from github
-		$ git clone git@github.com:etusolution/erjsTesting.git
-		```
+	```
+	## or simply clone from github
+	$ git clone git@github.com:etusolution/erjsTesting.git
+	```
 
-	- Format:
+- Format:
 
 	| Field | Type | Description |
 	|---|---|---|
