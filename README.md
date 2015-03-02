@@ -10,6 +10,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 - ## Manually testing locally (OSX)
 
 	- python
+
 	```
 	### install homebrew first
 	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -20,11 +21,13 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	```
 
 	- selenium & pandas
+	
 	```
 	$ pip install selenium pandas
 	```
 
 	- firefox (default browser driver in selenium)
+	
 	```
 	### install brew-cask first
 	$ brew tap phinze/homebrew-cask
@@ -35,6 +38,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	```
 
 	- phantomjs (quick and lightweight alternative)
+	
 	```
 	$ brew update && brew install phantomjs
 	```
@@ -42,9 +46,11 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 - ## Remote testing automatically (CentOS@209)
 
 	- python
+
 		Just using the default version for convenience.
 
 	- phantomjs
+	
 	```
 	### download phantomjs
 	root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
@@ -67,19 +73,21 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	```
 
 	- selenium
-```
-[root@master ~]# pip install selenium
-```
+	
+	```
+	[root@master ~]# pip install selenium
+	```
 
  	- pandas
-```
-[root@master ~]# yum install gcc-gfortran
-[root@master ~]# yum install libgfortran
-[root@master ~]# yum install lapack
-[root@master ~]# yum install gcc-c++
-[root@master ~]# pip install numpy
-[root@master ~]# pip install pandas
-```
+	
+	```
+	[root@master ~]# yum install gcc-gfortran
+	[root@master ~]# yum install libgfortran
+	[root@master ~]# yum install lapack
+	[root@master ~]# yum install gcc-c++
+	[root@master ~]# pip install numpy
+	[root@master ~]# pip install pandas
+	```
 
 ---
 
