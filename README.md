@@ -1,9 +1,12 @@
 ER SaaS End-to-End Test
 ===
 
-Welcome to Etu Recommander/Insight! This document will show you how to use `python + selenium + phantomjs` to simulating user behavior and verify the whole software functionality.
+Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! This document will help you to use `python + selenium + phantomjs` simulating the user's behavior and verify the whole software functionality step-by-step.
+---
 
-- ## Enviorment Setup
+# Environment Setup
+
+- ## Local (OSX)
 
 	- python
 	```
