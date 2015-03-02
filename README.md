@@ -104,7 +104,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 	- Input:
 
-		- csv files `web_test_scene00{1-4}.csv` which describe actions for each robot.
+		- csv files `web_test_scene00[1-4].csv` which describe actions for each robot.
 		- python script `web_saas.py` which control the robots.
 
 		Put them all together under your test project directory.
