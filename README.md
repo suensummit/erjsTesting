@@ -45,12 +45,12 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 		Just using the default version for convenience.
 
 	- phantomjs
-		- Download Phantom
-```
-[root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
+	```
+	### download phantomjs
+	[root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
+  	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 	Dload  Upload   Total   Spent    Left  Speed
+		100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
 ```
 
 		- Extract directory
