@@ -47,39 +47,30 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	- phantomjs
 	```
 	### download phantomjs
-	[root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
+	root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
   	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 	Dload  Upload   Total   Spent    Left  Speed
-		100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
-```
+	                                 Dload  Upload   Total   Spent    Left  Speed
+	100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
+	### extract directory
+	[root@master ~]# tar xvf 	phantomjs-1.9.2-linux-x86_64.tar.bz2
 
-		- Extract directory
-```
-[root@master ~]# tar xvf phantomjs-1.9.2-linux-x86_64.tar.bz2
-```
+	### copy binary to bin folder
+	[root@master ~]# cp phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin
 
-		- Copy binary to bin folder
-```
-[root@master ~]# cp phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin
-```
+	### verify your installation: Hello, world!
+	root@master ~]# curl -O https://raw.githubusercontent.com/ariya/phantomjs/master/examples/hello.js
+  	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+	                                 Dload  Upload   Total   Spent    Left  Speed
+  	0    46    0    46    0     0    108      0 --:--:-- --:--:-- --:--:--   200
+	[root@master ~]# phantomjs hello.js
+	Hello, world!
+	```
 
-		- Verify your installation: Hello, world!
-```
-[root@master ~]# curl -O https://raw.githubusercontent.com/ariya/phantomjs/master/examples/hello.js
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0    46    0    46    0     0    108      0 --:--:-- --:--:-- --:--:--   200
-[root@master ~]# phantomjs hello.js
-Hello, world!
-```
-
----
 	- selenium
 ```
 [root@master ~]# pip install selenium
 ```
 
----
  	- pandas
 ```
 [root@master ~]# yum install gcc-gfortran
@@ -95,6 +86,7 @@ Hello, world!
 # Test Data Preparation
 
 [PreDomain](http://210.63.38.209:8099/test_entry.html)
+
 [Test site](http://210.63.38.209:8099/test.html)
 
 	- Input:
