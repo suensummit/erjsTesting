@@ -52,14 +52,17 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
                                  Dload  Upload   Total   Spent    Left  Speed
 100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
 ```
+
 		- Extract directory
 ```
 [root@master ~]# tar xvf phantomjs-1.9.2-linux-x86_64.tar.bz2
 ```
+
 		- Copy binary to bin folder
 ```
 [root@master ~]# cp phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin
 ```
+
 		- Verify your installation: Hello, world!
 ```
 [root@master ~]# curl -O https://raw.githubusercontent.com/ariya/phantomjs/master/examples/hello.js
@@ -69,11 +72,13 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 [root@master ~]# phantomjs hello.js
 Hello, world!
 ```
+
 ---
 	- selenium
 ```
 [root@master ~]# pip install selenium
 ```
+
 ---
  	- pandas
 ```
@@ -84,6 +89,7 @@ Hello, world!
 [root@master ~]# pip install numpy
 [root@master ~]# pip install pandas
 ```
+
 ---
 
 # Test Data Preparation
