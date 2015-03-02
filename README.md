@@ -53,48 +53,54 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 	```
 	### download phantomjs
-	$ curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
+	[root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
   	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 	                                 Dload  Upload   Total   Spent    Left  Speed
 	100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
 	### extract directory
-	$ tar xvf 	phantomjs-1.9.2-linux-x86_64.tar.bz2
+	[root@master ~]# tar xvf 	phantomjs-1.9.2-linux-x86_64.tar.bz2
 
 	### copy binary to bin folder
-	$ cp phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin
+	[root@master ~]# cp phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin
 
 	### verify your installation: Hello, world!
-	$ curl -O https://raw.githubusercontent.com/ariya/phantomjs/master/examples/hello.js
+	[root@master ~]# curl -O https://raw.githubusercontent.com/ariya/phantomjs/master/examples/hello.js
   	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 	                                 Dload  Upload   Total   Spent    Left  Speed
   	0    46    0    46    0     0    108      0 --:--:-- --:--:-- --:--:--   200
-	$ phantomjs hello.js
+	[root@master ~]# phantomjs hello.js
 	Hello, world!
-	$
+	[root@master ~]#
 	```
 
 	- selenium
 
 	```
-	$ pip install selenium
+	[root@master ~]# pip install selenium
 	```
 
  	- pandas
 
 	```
-	$ yum install gcc-gfortran
-	$ yum install libgfortran
-	$ yum install lapack
-	$ yum install gcc-c++
-	$ pip install numpy
-	$ pip install pandas
+	[root@master ~]# yum install gcc-gfortran
+	[root@master ~]# yum install libgfortran
+	[root@master ~]# yum install lapack
+	[root@master ~]# yum install gcc-c++
+	[root@master ~]# pip install numpy
+	[root@master ~]# pip install pandas
 	```
 
-# Test Data Preparation
+---
+
+# Test Site Preparation
 
 [PreDomain](http://210.63.38.209:8099/test_entry.html)
 
 [Test site](http://210.63.38.209:8099/test.html)
+
+---
+
+# Test Data Preparation
 
 	- Input:
 		- csv files `web_test_scene00{1-4}.csv` which describe actions for each robot.
