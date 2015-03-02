@@ -1,12 +1,13 @@
-ER SaaS End-to-End Test
-===
+# ER SaaS End-to-End Test
+---
 
 Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! This document will help you to use `python + selenium + phantomjs` simulating the user's behavior and verify the whole software functionality step-by-step.
+
 ---
 
 # Environment Setup
 
-- ## Local (OSX)
+- ## Manually testing locally (OSX)
 
 	- python
 	```
@@ -18,9 +19,9 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	$ brew install python
 	```
 
-	- selenium
+	- selenium & pandas
 	```
-	$ pip install selenium
+	$ pip install selenium pandas
 	```
 
 	- firefox (default browser driver in selenium)
@@ -38,13 +39,67 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	$ brew update && brew install phantomjs
 	```
 
-- ## Test Data Preparation
+- ## Remote testing automatically (CentOS@209)
+
+	- python
+		Just using the default version for convenience.
+
+	- phantomjs
+		- Download Phantom
+```
+[root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
+```
+		- Extract directory
+```
+[root@master ~]# tar xvf phantomjs-1.9.2-linux-x86_64.tar.bz2
+```
+		- Copy binary to bin folder
+```
+[root@master ~]# cp phantomjs-1.9.2-linux-x86_64/bin/phantomjs /usr/local/bin
+```
+		- Verify your installation: Hello, world!
+```
+[root@master ~]# curl -O https://raw.githubusercontent.com/ariya/phantomjs/master/examples/hello.js
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0    46    0    46    0     0    108      0 --:--:-- --:--:-- --:--:--   200
+[root@master ~]# phantomjs hello.js
+Hello, world!
+```
+---
+	- selenium
+```
+[root@master ~]# pip install selenium
+```
+---
+ 	- pandas
+```
+[root@master ~]# yum install gcc-gfortran
+[root@master ~]# yum install libgfortran
+[root@master ~]# yum install lapack
+[root@master ~]# yum install gcc-c++
+[root@master ~]# pip install numpy
+[root@master ~]# pip install pandas
+```
+---
+
+# Test Data Preparation
+
+[PreDomain](http://210.63.38.209:8099/test_entry.html)
+[Test site](http://210.63.38.209:8099/test.html)
 
 	- Input:
-		- csv files `web_test_[camp/cat/src/funnel].csv` which describe actions for each robot.
+		- csv files `web_test_scene00{1-4}.csv` which describe actions for each robot.
 		- python script `web_saas.py` which control the robots.
 
 		Put them all together under your test project directory.
+		```
+		## or simply clone from github
+		$ git clone git@github.com:etusolution/erjsTesting.git
+		```
 
 	- Format:
 
