@@ -21,13 +21,13 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	```
 
 	- selenium & pandas
-	
+
 	```
 	$ pip install selenium pandas
 	```
 
 	- firefox (default browser driver in selenium)
-	
+
 	```
 	### install brew-cask first
 	$ brew tap phinze/homebrew-cask
@@ -38,7 +38,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	```
 
 	- phantomjs (quick and lightweight alternative)
-	
+
 	```
 	$ brew update && brew install phantomjs
 	```
@@ -50,10 +50,10 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 		Just using the default version for convenience.
 
 	- phantomjs
-	
+
 	```
 	### download phantomjs
-	root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
+	[root@master ~]# curl -O https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
   	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 	                                 Dload  Upload   Total   Spent    Left  Speed
 	100 12.6M  100 12.6M    0     0  1048k      0  0:00:12  0:00:12 --:--:-- 2620k
@@ -74,13 +74,13 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	```
 
 	- selenium
-	
+
 	```
 	[root@master ~]# pip install selenium
 	```
 
  	- pandas
-	
+
 	```
 	[root@master ~]# yum install gcc-gfortran
 	[root@master ~]# yum install libgfortran
@@ -240,4 +240,4 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	```
 
 ---
-2015-02-26 last edited by [Summit Suen](https://github.com/suensummit)
+2015-03-02 last edited by [Summit Suen](https://github.com/suensummit)
