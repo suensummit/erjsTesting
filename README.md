@@ -105,7 +105,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	210.63.38.209	etusaas.com
 	```
 
-	Basically, Once complete steps above, one should able to access our sample site now via [THIS LINK](http://etusaas.com:8099/test_entry.html). For those who wanna deploy/modify/maintain their own sample test page, please follow the following step:
+	Basically, Once complete this step, one should able to access our sample site now via [THIS LINK](http://etusaas.com:8099/test_entry.html). For those who wanna deploy/modify/maintain their own sample test page, please follow the following step:
 
 - ## Sample website with etu.js embeded
 
