@@ -106,23 +106,23 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 - ## Setup virtual host (for simulating pre-domain)
 
-	- Edit this file
+	- Edit this file (you might need `sudo` permission)
 
 	```
 	[root@master ~]# vim /etc/hosts
 	```
 
-	- Insert this line to the `host` file
+	- Insert this line to the `hosts` file
 
 	```
 	210.63.38.209       etusaas.com
 	```
 
-	Basically, one could access our sample site now via [Click me](http://etusaas.com:8099/test_entry.html). If you wanna deploy/modify/maintain your own sample test website, please follow the step below:
+	Basically, Once complete steps above, one should able to access our sample site now via [THIS LINK](http://etusaas.com:8099/test_entry.html). For those who wanna deploy/modify/maintain their own sample test website, please follow the following step:
 
 - ## Deploy sample website (Optional)
 
-	- Copy test pages
+	- Copy test pages to your local web server directory
 
 	```
 	[root@master ~]# cp /root/ss_temp/erjsTesting/test.html /var/www/html/test.html
