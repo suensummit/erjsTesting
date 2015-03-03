@@ -9,10 +9,6 @@ import getopt
 
 inputfile = str(sys.argv[1])
 with open(inputfile, 'rb') as f:
-#with open('web_test_cat.csv', 'rb') as f:
-#with open('web_test_src.csv', 'rb') as f:
-#with open('web_test_funnel.csv', 'rb') as f:
-#with open('web_test_camp.csv', 'rb') as f:
 	reader = csv.reader(f)
 	testbot_raw = list(reader)
 
@@ -20,10 +16,10 @@ testbot = sorted(testbot_raw, key=lambda testbot_raw: testbot_raw[2])
 df = DataFrame(testbot, columns = testbot[len(testbot)-1])
 
 # set test sample ec url
-preurl = "http://210.63.38.209:8099/test_entry.html"
+preurl = "http://etusaas.com:8099/test_entry.html"
 url = "http://210.63.38.209:8099/test.html"
 
-# 
+#
 driver = {}
 k = 0
 ssid = df.ssid.unique()
@@ -64,4 +60,3 @@ for k in range(len(df)-2):
 
 for k in range(len(ssid)-1):
 	driver[ssid[k]].quit()
-
