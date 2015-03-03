@@ -94,16 +94,6 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 # Test Site Preparation
 
-- ## Sample website with etu.js embeded
-
-	- Demo: [PreDomain](http://210.63.38.209:8099/test_entry.html)
-
-	- Source: [test_entry.html](https://github.com/suensummit/erjsTesting/blob/gh-pages/test_entry.html "test_entry.html")
-
-	- Demo: [Test site](http://210.63.38.209:8099/test.html)
-
-	- Source: [test.html](https://github.com/suensummit/erjsTesting/blob/gh-pages/test.html "test.html")
-
 - ## Setup virtual host (for simulating pre-domain)
 
 	- Insert this line to your `/etc/hosts` file (you might need `sudo` permission)
@@ -114,13 +104,20 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 	Basically, Once complete steps above, one should able to access our sample site now via [THIS LINK](http://etusaas.com:8099/test_entry.html). For those who wanna deploy/modify/maintain their own sample test website, please follow the following step:
 
+- ## Sample website with etu.js embeded
+
+	| PreDomain | Test site |
+	|---|---|
+	| [Demo](http://210.63.38.209:8099/test_entry.html) | [Demo](http://210.63.38.209:8099/test.html) |
+	| [Source](https://github.com/suensummit/erjsTesting/blob/gh-pages/test_entry.html "test_entry.html") | [Source](https://github.com/suensummit/erjsTesting/blob/gh-pages/test.html "test.html") |
+
 - ## Deploy sample website (Optional)
 
 	- Copy test pages to your local web server directory
 
 	```
-	[root@master ~]# cp /root/ss_temp/erjsTesting/test.html /var/www/html/test.html
-	[root@master ~]# cp /root/ss_temp/erjsTesting/test_entry.html /var/www/html/test_entry.html
+	[root@master ~]# cp $LOCAL_REPO/erjsTesting/test.html /var/www/html/test.html
+	[root@master ~]# cp $LOCAL_REPO/erjsTesting/test_entry.html /var/www/html/test_entry.html
 	```
 
 ---
