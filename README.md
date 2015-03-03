@@ -99,16 +99,17 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	- Insert this line to your `/etc/hosts` file (you might need `sudo` permission)
 
 	```
+	210.63.38.209	etusaasentry.com
 	210.63.38.209	etusaas.com
 	```
 
-	Basically, Once complete steps above, one should able to access our sample site now via [THIS LINK](http://etusaas.com:8099/test_entry.html). For those who wanna deploy/modify/maintain their own sample test website, please follow the following step:
+	Basically, Once complete steps above, one should able to access our sample site now via [THIS LINK](http://etusaas.com:8099/test_entry.html). For those who wanna deploy/modify/maintain their own sample test page, please follow the following step:
 
 - ## Sample website with etu.js embeded
 
-	| PreDomain | Test site |
+	| referrer | sample page |
 	|---|---|
-	| [Demo](http://210.63.38.209:8099/test_entry.html) | [Demo](http://210.63.38.209:8099/test.html) |
+	| [Demo](http://etusaasentry.com:8099/test_entry.html) | [Demo](http://etusaas.com:8099/test.html) |
 	| [Source](https://github.com/suensummit/erjsTesting/blob/gh-pages/test_entry.html "test_entry.html") | [Source](https://github.com/suensummit/erjsTesting/blob/gh-pages/test.html "test.html") |
 
 - ## Deploy sample website (Optional)
@@ -120,9 +121,20 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	[root@master ~]# cp $LOCAL_REPO/erjsTesting/test_entry.html /var/www/html/test_entry.html
 	```
 
+	- Check the port configuration (one could using default 80 port and change the url inside html/python script, or listen to 8099 port to avoid modifying scripts)
+
+	- Insert this line to your `/etc/hosts` file on your machine (you might need `sudo` permission)
+
+	```
+	127.0.0.1	etusaasentry.com
+	127.0.0.1	etusaas.com
+	```
+
 ---
 
 # Test Data Preparation
+
+
 
 - Generating:
 
