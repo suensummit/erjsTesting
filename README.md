@@ -7,7 +7,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 # Environment Setup
 
-- ## Local testing manually (OSX)
+- ## Mac OSX
 
 	- python
 
@@ -43,7 +43,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	$ brew update && brew install phantomjs
 	```
 
-- ## Remote testing automatically (CentOS@209)
+- ## Linux Server (CentOS@209 as an example)
 
 	- python
 
@@ -89,6 +89,8 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 	[root@master ~]# pip install numpy
 	[root@master ~]# pip install pandas
 	```
+
+- ## Windows (Are you kidding me?!)
 
 ---
 
