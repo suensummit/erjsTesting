@@ -94,7 +94,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 # Test Site Preparation
 
-- ## Sample website with Etu.js embeded
+- ## Sample website with etu.js embeded
 
 	- Demo: [PreDomain](http://210.63.38.209:8099/test_entry.html)
 
@@ -106,16 +106,10 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 - ## Setup virtual host (for simulating pre-domain)
 
-	- Edit this file (you might need `sudo` permission)
+	- Insert this line to your `/etc/hosts` file (you might need `sudo` permission)
 
 	```
-	[root@master ~]# vim /etc/hosts
-	```
-
-	- Insert this line to the `hosts` file
-
-	```
-	210.63.38.209       etusaas.com
+	210.63.38.209	etusaas.com
 	```
 
 	Basically, Once complete steps above, one should able to access our sample site now via [THIS LINK](http://etusaas.com:8099/test_entry.html). For those who wanna deploy/modify/maintain their own sample test website, please follow the following step:
