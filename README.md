@@ -1,6 +1,6 @@
-# ER SaaS End-to-End Test
+# An End-to-End Test of ER SaaS
 
-Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! This document will help you to use `python + selenium + phantomjs` simulating the user's behavior and verify the whole software functionality step-by-step.
+Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! This document helps you using PSP `python + selenium + phantomjs` to simulate user's behavior and verify the whole software functionality step-by-step.
 ![Etu SaaS Logo](https://github.com/suensummit/erjsTesting/blob/gh-pages/logo.png "Etu SaaS Logo")
 
 ---
@@ -94,9 +94,40 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 
 # Test Site Preparation
 
-[PreDomain](http://210.63.38.209:8099/test_entry.html)
+- ## Sample website with Etu.js embeded
 
-[Test site](http://210.63.38.209:8099/test.html)
+	- Demo: [PreDomain](http://210.63.38.209:8099/test_entry.html)
+
+	- Source: [test_entry.html](https://github.com/suensummit/erjsTesting/blob/gh-pages/test_entry.html "test_entry.html")
+
+	- Demo: [Test site](http://210.63.38.209:8099/test.html)
+
+	- Source: [test.html](https://github.com/suensummit/erjsTesting/blob/gh-pages/test.html "test.html")
+
+- ## Setup virtual host (for simulating pre-domain)
+
+	- Edit this file
+
+	```
+	[root@master ~]# vim /etc/hosts
+	```
+
+	- Insert this line to the `host` file
+
+	```
+	210.63.38.209       etusaas.com
+	```
+
+	Basically, one could access our sample site now via [Click me](http://etusaas.com:8099/test_entry.html). If you wanna deploy/modify/maintain your own sample test website, please follow the step below:
+
+- ## Deploy sample website (Optional)
+
+	- Copy test pages
+
+	```
+	[root@master ~]# cp /root/ss_temp/erjsTesting/test.html /var/www/html/test.html
+	[root@master ~]# cp /root/ss_temp/erjsTesting/test_entry.html /var/www/html/test_entry.html
+	```
 
 ---
 
@@ -110,6 +141,7 @@ Welcome to [Etu Recommander SaaS](http://54.169.252.99/admin/_dashboard.html)! T
 - Input:
 
 	- csv files `web_test_scene00{1-4}.csv` which describe actions for each robot.
+
 	- python script `web_saas.py` which control the robots.
 
 	Put them all together under your test project directory.
