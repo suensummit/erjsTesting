@@ -27,7 +27,9 @@ while k < len(ssid)-1:
 	key = ssid[k]
 	value = webdriver.PhantomJS()
 	#value = webdriver.Firefox()
+	value.delete_all_cookies()
 	driver[key] = value
+	#driver[key].delete_all_cookies()
 	k += 1
 
 # send actions from testbot
@@ -59,5 +61,6 @@ for k in range(len(df)-2):
 	#driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
 
 for k in range(len(ssid)-1):
-	driver[ssid[k]].delete_all_cookies()
+	#driver[ssid[k]].delete_all_cookies()
+	#driver[ssid[k]].close()
 	driver[ssid[k]].quit()
