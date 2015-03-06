@@ -1,5 +1,5 @@
 from selenium import webdriver
-from pandas import *
+from pandas import DataFrame
 import csv
 import time
 import sys
@@ -19,21 +19,20 @@ df = DataFrame(testbot, columns = testbot[len(testbot)-1])
 preurl = "http://etusaasentry.com:8099/test_entry.html"
 url = "http://etusaas.com:8099/test.html"
 
-#
+# launch browsers for each uid
 driver = {}
 k = 0
 ssid = df.ssid.unique()
 while k < len(ssid)-1:
 	key = ssid[k]
-	value = webdriver.PhantomJS()
-	#value = webdriver.Firefox()
-	value.delete_all_cookies()
+	#value = webdriver.PhantomJS()
+	value = webdriver.Firefox()
 	driver[key] = value
-	#driver[key].delete_all_cookies()
+	driver[key].delete_all_cookies()
 	k += 1
 
 # send actions from testbot
-for k in range(len(df)-2):
+for k in range(len(df)-1):
 	driver[df.ssid[k]].get(preurl)
 	driver[df.ssid[k]].find_element_by_link_text('TEST').click()
 	driver[df.ssid[k]].find_element_by_id('agroup').send_keys("etusolution")
@@ -54,8 +53,6 @@ for k in range(len(df)-2):
 	driver[df.ssid[k]].find_element_by_id('aoid').send_keys(df.oid[k])
 	driver[df.ssid[k]].find_element_by_id('aercamp').send_keys(df.ERCAMP[k])
 	driver[df.ssid[k]].find_element_by_id('aerad').send_keys(df.ERAD[k])
-	#print 'It is the ' + str(k+1) + 'th testbot\n'
-	#time.sleep(1)
 	driver[df.ssid[k]].find_element_by_id('custom-click').click()
 	# Take screenshot for verify
 	#driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
