@@ -5,6 +5,7 @@ RUN apt-get update -y -q && \
 
 RUN pip install --upgrade pip
 RUN pip install selenium
+RUN pip install pandas
 
 COPY . /
 CMD ["python", "web_saas2.py"]
