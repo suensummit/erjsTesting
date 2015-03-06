@@ -6,7 +6,7 @@ RUN apt-get update -y -q && \
 RUN pip install --upgrade pip
 RUN pip install selenium
 
-COPY .
+COPY . /
 CMD ["python", "web_saas2.py"]
 CMD ["python", "web_saas.py"]
 CMD ["python", "web_test_gen_scene001.py"]
