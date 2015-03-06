@@ -25,8 +25,8 @@ k = 0
 ssid = df.ssid.unique()
 while k < len(ssid)-1:
 	key = ssid[k]
-	#value = webdriver.PhantomJS()
-	value = webdriver.Firefox()
+	value = webdriver.PhantomJS()
+	#value = webdriver.Firefox()
 	driver[key] = value
 	driver[key].delete_all_cookies()
 	k += 1
