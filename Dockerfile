@@ -7,6 +7,8 @@ RUN pip install --upgrade pip
 RUN pip install selenium
 RUN pip install pandas
 
+RUN echo -e "\n210.63.38.209\tetusaasentry.com\n210.63.38.209\tetusaas.com\n" > /etc/hosts
+
 COPY . /
 CMD ["python", "web_saas2.py"]
 CMD ["python", "web_saas.py"]
