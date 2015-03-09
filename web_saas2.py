@@ -13,11 +13,9 @@ with open(inputfile, 'rb') as f:
 
 testbot = sorted(testbot_raw, key=lambda testbot_raw: testbot_raw[2])
 df = DataFrame(testbot, columns = testbot[len(testbot)-1])
-
 # set test sample ec url
 preurl = "http://etusaasentry.com:8099/test_entry.html"
 url = "http://etusaas.com:8099/test.html"
-
 # launch browsers for each uid
 driver = {}
 k = 0
@@ -27,7 +25,6 @@ while k < len(ssid)-1:
 	value = webdriver.PhantomJS()
 	#value = webdriver.Firefox()
 	driver[key] = value
-	#driver[key].switch_to_frame(driver[key].find_element_by_tag_name("iframe"))
 	driver[key].delete_all_cookies()
 	k += 1
 
@@ -57,10 +54,12 @@ for k in range(len(df)-1):
 	if df.flag[k] == '1':
 		driver[df.ssid[k]].switch_to.frame(driver[df.ssid[k]].find_element_by_tag_name("iframe"))
 		driver[df.ssid[k]].delete_all_cookies()
+		driver[df.ssid[k]].switch_to.default_content()
+		driver[df.ssid[k]].delete_all_cookies()
 		pass
-	driver[df.ssid[k]].switch_to.default_content()
 
 for k in range(len(ssid)-1):
-	#driver[ssid[k]].switch_to_frame(driver[ssid[k]].find_element_by_tag_name("iframe"))
+	#driver[ssid[k]].switch_to.frame(driver[ssid[k]].find_element_by_tag_name("iframe"))
 	driver[ssid[k]].delete_all_cookies()
+	#driver[df.ssid[k]].switch_to.default_content()
 	driver[ssid[k]].quit()
