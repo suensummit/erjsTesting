@@ -29,6 +29,7 @@ while k < len(ssid)-1:
 	#value = webdriver.Firefox()
 	driver[key] = value
 	driver[key].delete_all_cookies()
+	driver[key].add_cookie({'erUid':''})
 	k += 1
 
 # send actions from testbot

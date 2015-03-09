@@ -1,9 +1,9 @@
-from pandas import *
+from pandas import DataFrame
 import csv
 import time
 import sys
 import getopt
-from random import *
+from random import randint
 
 outputfile = str(sys.argv[1])
 k = int(sys.argv[2])
