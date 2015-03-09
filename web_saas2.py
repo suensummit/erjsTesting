@@ -58,7 +58,7 @@ for k in range(len(df)-1):
 		driver[df.ssid[k]].switch_to.frame(driver[df.ssid[k]].find_element_by_tag_name("iframe"))
 		driver[df.ssid[k]].delete_all_cookies()
 		pass
-	driver[df.ssid[k]].switch_to_default_content()
+	driver[df.ssid[k]].switch_to.default_content()
 
 for k in range(len(ssid)-1):
 	#driver[ssid[k]].switch_to_frame(driver[ssid[k]].find_element_by_tag_name("iframe"))
