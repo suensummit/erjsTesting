@@ -6,7 +6,6 @@ import sys
 import getopt
 
 # load test data
-
 inputfile = str(sys.argv[1])
 with open(inputfile, 'rb') as f:
 	reader = csv.reader(f)
@@ -28,8 +27,8 @@ while k < len(ssid)-1:
 	value = webdriver.PhantomJS()
 	#value = webdriver.Firefox()
 	driver[key] = value
+	#driver[key].switch_to_frame(driver[key].find_element_by_tag_name("iframe"))
 	driver[key].delete_all_cookies()
-	driver[key].add_cookie({'erUid':''})
 	k += 1
 
 # send actions from testbot
@@ -55,10 +54,13 @@ for k in range(len(df)-1):
 	driver[df.ssid[k]].find_element_by_id('aercamp').send_keys(df.ERCAMP[k])
 	driver[df.ssid[k]].find_element_by_id('aerad').send_keys(df.ERAD[k])
 	driver[df.ssid[k]].find_element_by_id('custom-click').click()
-	# Take screenshot for verify
-	#driver[df.ssid[k]].save_screenshot('screenshot_' + str(k+1) + '.png')
+	if df.flag[k] == '1':
+		driver[df.ssid[k]].switch_to_frame(driver[df.ssid[k]].find_element_by_tag_name("iframe"))
+		driver[df.ssid[k]].delete_all_cookies()
+		pass
+	driver[df.ssid[k]].switch_to_default_content()
 
 for k in range(len(ssid)-1):
-	#driver[ssid[k]].delete_all_cookies()
-	#driver[ssid[k]].close()
+	#driver[ssid[k]].switch_to_frame(driver[ssid[k]].find_element_by_tag_name("iframe"))
+	driver[ssid[k]].delete_all_cookies()
 	driver[ssid[k]].quit()
