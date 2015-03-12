@@ -4,6 +4,10 @@ import csv
 import time
 import sys
 import getopt
+from pyvirtualdisplay import Display
+
+display = Display(visible=0, size=(1024, 768))
+display.start()
 
 # load test data
 inputfile = str(sys.argv[1])
@@ -63,3 +67,5 @@ for k in range(len(ssid)-1):
 	driver[ssid[k]].delete_all_cookies()
 	#driver[ssid[k]].switch_to.default_content()
 	driver[ssid[k]].quit()
+
+display.stop()
