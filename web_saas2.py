@@ -4,10 +4,6 @@ import csv
 import time
 import sys
 import getopt
-from pyvirtualdisplay import Display
-
-display = Display(visible=0, size=(1024, 768))
-display.start()
 
 # load test data
 inputfile = str(sys.argv[1])
@@ -26,8 +22,8 @@ k = 0
 ssid = df.ssid.unique()
 while k < len(ssid)-1:
 	key = ssid[k]
-	#value = webdriver.PhantomJS()
-	value = webdriver.Firefox()
+	value = webdriver.PhantomJS()
+	#value = webdriver.Firefox()
 	driver[key] = value
 	driver[key].delete_all_cookies()
 	k += 1
@@ -66,6 +62,5 @@ for k in range(len(ssid)-1):
 	#driver[ssid[k]].switch_to.frame(driver[ssid[k]].find_element_by_tag_name("iframe"))
 	driver[ssid[k]].delete_all_cookies()
 	#driver[ssid[k]].switch_to.default_content()
-	driver[ssid[k]].quit()
-
-display.stop()
+	driver[ssid[k]].close()
+	#driver[ssid[k]].quit()
