@@ -53,9 +53,6 @@ for k in range(len(df)-1):
 	driver[df.ssid[k]].find_element_by_id('custom-click').click()
 
 for k in range(len(ssid)-1):
-	driver[ssid[k]].switch_to.frame(driver[ssid[k]].find_element_by_tag_name("iframe"))
-	driver[ssid[k]].delete_all_cookies()
-	driver[ssid[k]].switch_to.default_content()
 	driver[ssid[k]].delete_all_cookies()
 	driver[ssid[k]].close()
 	driver[ssid[k]].quit()
