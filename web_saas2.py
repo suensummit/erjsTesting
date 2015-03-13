@@ -22,7 +22,7 @@ k = 0
 ssid = df.ssid.unique()
 while k < len(ssid)-1:
 	key = ssid[k]
-	value = webdriver.PhantomJS('phantomjs', service_args=['--local-to-remote-url-access=true'])
+	value = webdriver.PhantomJS()
 	#value = webdriver.Firefox()
 	driver[key] = value
 	driver[key].delete_all_cookies()
