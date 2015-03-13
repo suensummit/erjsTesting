@@ -4,6 +4,8 @@ import csv
 import time
 import sys
 import getopt
+import selenium.webdriver.remote.command
+import selenium.webdriver.phantomjs.service
 
 # load test data
 inputfile = str(sys.argv[1])
