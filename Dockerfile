@@ -11,15 +11,15 @@ RUN echo -e "\n210.63.38.209\tetusaasentry.com\n210.63.38.209\tetusaas.com\n" > 
 
 COPY . /
 
-RUN python web_test_gen_scene001.py web_test_scene001 1
-RUN python web_test_gen_scene002.py web_test_scene002 1
-RUN python web_test_gen_scene003.py web_test_scene003 1
-RUN python web_test_gen_scene004.py web_test_scene004 1
+RUN python /web_test_gen_scene001.py /web_test_scene001 1
+RUN python /web_test_gen_scene002.py /web_test_scene002 1
+RUN python /web_test_gen_scene003.py /web_test_scene003 1
+RUN python /web_test_gen_scene004.py /web_test_scene004 1
 
-RUN python web_saas2.py web_test_scene001.csv
-RUN python web_saas2.py web_test_scene002.csv
-RUN python web_saas2.py web_test_scene003.csv
-RUN python web_saas2.py web_test_scene004.csv
+RUN python /web_saas2.py /web_test_scene001.csv
+RUN python /web_saas2.py /web_test_scene002.csv
+RUN python /web_saas2.py /web_test_scene003.csv
+RUN python /web_saas2.py /web_test_scene004.csv
 
 CMD ["python"]
 #CMD ["python", "web_saas2.py"]
